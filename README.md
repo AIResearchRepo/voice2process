@@ -17,7 +17,15 @@ In case pyaudio is not getting installed, install it using brew
 ```
 brew install pyaudio
 ```
-
+- If you are using Linux install festival (Not yet tested from my end.)
+For Ubuntu:
+```
+$sudo apt-get install festival
+```
+For Centos:
+```
+$yum install festival
+```
 ## How to run ?
 ```
 $python order_vm_voice.py

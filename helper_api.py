@@ -1,4 +1,5 @@
 import os
+import platform
 
 """
 This function will say the help function
@@ -12,6 +13,11 @@ def help_options():
 This function will convert from text to speech
 """
 def speak_text(data="I am unable to process the request"):
-    os.system("say %s"%data)
+    if platform.system() == 'Darwin':
+        os.system("say %s"%data)
+    elif platform.system() == 'Linux':
+        os.system("echo %s | festival --tts"%data)
+    else:
+        print "I am unable to dectect your OS"
 
     
